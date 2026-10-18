@@ -1,0 +1,2 @@
+94b41ad5f24800b0e2f6e96db4766171e87026f6dcf39a407badb31980be5dbc  paper-plan-2.0.0-windows.zip
+c960389ea05b8ad6b3fde86818c2df5d65ad97de7922b7d84552adccdae1dfaf  paper-plan-2.0.0-source.zip
