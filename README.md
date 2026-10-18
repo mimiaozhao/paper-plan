@@ -2,13 +2,17 @@
 
 在 Windows Codex 中，用可编辑的多级目录整理计划，再按确认版本交回原对话执行。
 
-发行文件： [Windows 安装包](https://github.com/mimiaozhao/paper-plan/releases/download/v2.0.0/paper-plan-2.0.0-windows.zip) · [完整源码包](https://github.com/mimiaozhao/paper-plan/releases/download/v2.0.0/paper-plan-2.0.0-source.zip) · [SHA-256 校验](https://github.com/mimiaozhao/paper-plan/releases/download/v2.0.0/SHA256SUMS.txt)
+**[完整中文使用说明](USAGE.md)** · [下载最新版本](https://github.com/mimiaozhao/paper-plan/releases/latest)
 
-本仓库以发行归档提供安装包和完整开发源码，均可直接下载。
+2.0.1 新增图文说明，并修复全局目标和约束只能看到少量文字的问题，展开后可直接查看全文。
+
+发行文件：[Windows 安装包](https://github.com/mimiaozhao/paper-plan/releases/download/v2.0.1/paper-plan-2.0.1-windows.zip) · [完整源码包](https://github.com/mimiaozhao/paper-plan/releases/download/v2.0.1/paper-plan-2.0.1-source.zip) · [SHA-256 校验](https://github.com/mimiaozhao/paper-plan/releases/download/v2.0.1/SHA256SUMS.txt)
+
+本仓库以发行归档提供安装包和完整开发源码。下载后请先阅读 [使用说明](USAGE.md)。
 
 ## 安装
 
-1. 从 [Releases](https://github.com/mimiaozhao/paper-plan/releases) 下载 `paper-plan-2.0.0-windows.zip`。
+1. 从 [Releases](https://github.com/mimiaozhao/paper-plan/releases) 下载 `paper-plan-2.0.1-windows.zip`。
 2. **完整解压到固定文件夹**，例如 `C:\Tools\paper-plan`，不要直接在压缩包内运行。
 3. 双击 `Install.cmd`。安装器查找 Codex 自带或系统的 Python 3.11+，创建独立环境，并联网安装依赖。界面已经编译，无需 Node.js。
 4. 在 Codex 中审阅并信任 `UserPromptSubmit`、`Stop`、`Interrupt` 三项钩子。这是首次安装的宿主要求，安装器不会代替你信任。
@@ -36,7 +40,7 @@
 
 ## 更新与停用
 
-更新前备份 `data` 文件夹，在原安装目录解压新版本，再运行 `Install.cmd`。包内没有 `data` 和 `.venv`，更新不会主动删除它们。钩子定义变化时需要重新审阅，定义不变则保留原信任。
+更新前先结束任务、停止插件服务，再备份 `data` 文件夹；将新版本内容覆盖到原安装目录，运行 `Install.cmd`。包内没有 `data` 和 `.venv`，更新不会主动删除它们。钩子定义变化时需要重新审阅，定义不变则保留原信任。
 
 在 Codex 插件管理中禁用“论文式计划”即可停用。需要停止本地服务时运行 `stop.ps1`。其他插件设置会保留。
 
